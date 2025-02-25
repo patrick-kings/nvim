@@ -23,7 +23,6 @@ return {
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
       {
         'williamboman/mason.nvim',
-        cmd = { 'Mason', 'MasonInstall', 'MasonInstallAll', 'MasonUpdate' },
         opts = function()
           return overrides.mason
         end,

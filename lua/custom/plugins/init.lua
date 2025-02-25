@@ -65,20 +65,7 @@ return {
   -- {
   --   'nvim-telescope/telescope-dap.nvim',
   -- },
-  -- {
-  --   -- grammar checking
-  --   'rhysd/vim-grammarous',
-  --   config = function()
-  --     require('vim-grammarous').setup()
-  --   end,
-  -- },
-  -- {
-  --   -- zig
-  --   'ziglang/zig.vim',
-  --   config = function()
-  --     require('zig').setup()
-  --   end,
-  -- },
+
   -- {
   --   'LiadOz/nvim-dap-repl-highlights',
   --   config = true,
@@ -92,6 +79,14 @@ return {
   --     end
   --   end,
   -- },
+  --
+  {
+    -- typescript
+    'pmizio/typescript-tools.nvim',
+
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+  },
 
   {
     -- Rust
@@ -149,10 +144,10 @@ return {
     -- icons
     'nvim-tree/nvim-web-devicons',
 
-    config = function()
-      local opts = require 'custom.configs.overrides'
+    opts = require 'custom.configs.nvim-web-devicons',
 
-      require('nvim-web-devicons').setup { opts }
+    config = function(_, opts)
+      require('nvim-web-devicons').setup(opts)
     end,
   },
 
