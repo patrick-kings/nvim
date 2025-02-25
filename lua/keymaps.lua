@@ -45,4 +45,44 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.keymap.set('n', '<C-i>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
+vim.keymap.set('n', '<C-o>', '<cmd>bprevious<CR>', { desc = 'Move to Previous buffer' })
+vim.keymap.set('n', '<C-d>', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
+
+vim.keymap.set('t', '<A-h>', '<C-\\><C-N><C-w>h', { noremap = true, desc = 'leave terminal mode and move to left window' })
+vim.keymap.set('t', '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true, desc = 'leave terminal mode and move to right window' })
+vim.keymap.set('t', '<A-k>', '<C-\\><C-N><C-w>k', { noremap = true, desc = 'leave terminal mode and move to top window' })
+vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true, desc = 'leave terminal mode and move to bottom window' })
+
+-- Term Toggle Function
+local term_buf = nil
+local term_win = nil
+
+function TermToggle(height)
+  if term_win and vim.api.nvim_win_is_valid(term_win) then
+    vim.cmd 'hide'
+  else
+    vim.cmd 'botright new'
+    local new_buf = vim.api.nvim_get_current_buf()
+    vim.cmd('resize ' .. height)
+    if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
+      vim.cmd('buffer ' .. term_buf) -- go to terminal buffer
+      vim.cmd('bd ' .. new_buf) -- cleanup new buffer
+    else
+      vim.cmd 'terminal'
+      term_buf = vim.api.nvim_get_current_buf()
+      vim.wo.number = false
+      vim.wo.relativenumber = false
+      vim.wo.signcolumn = 'no'
+    end
+    vim.cmd 'startinsert!'
+    term_win = vim.api.nvim_get_current_win()
+  end
+end
+
+-- Term Toggle Keymaps
+vim.keymap.set('n', '<A-t>', ':lua TermToggle(20)<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<A-t>', '<Esc>:lua TermToggle(20)<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:lua TermToggle(20)<CR>', { noremap = true, silent = true })
+
 -- vim: ts=2 sts=2 sw=2 et
