@@ -48,11 +48,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', '<C-i>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
 vim.keymap.set('n', '<C-o>', '<cmd>bprevious<CR>', { desc = 'Move to Previous buffer' })
 vim.keymap.set('n', '<C-d>', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
+vim.keymap.set('t', '<C-d>', '<cmd>bdelete!<CR>', { desc = 'Delete terminal buffer' })
 
-vim.keymap.set('t', '<A-h>', '<C-\\><C-N><C-w>h', { noremap = true, desc = 'leave terminal mode and move to left window' })
-vim.keymap.set('t', '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true, desc = 'leave terminal mode and move to right window' })
-vim.keymap.set('t', '<A-k>', '<C-\\><C-N><C-w>k', { noremap = true, desc = 'leave terminal mode and move to top window' })
-vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true, desc = 'leave terminal mode and move to bottom window' })
+vim.keymap.set('t', '<A-h>', '<C-\\><C-N><C-w>h', { noremap = true, desc = 'Leave terminal mode and move to left window' })
+vim.keymap.set('t', '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true, desc = 'Leave terminal mode and move to right window' })
+vim.keymap.set('t', '<A-k>', '<C-\\><C-N><C-w>k', { noremap = true, desc = 'Leave terminal mode and move to top window' })
+vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true, desc = 'Leave terminal mode and move to bottom window' })
 
 -- Term Toggle Function
 local term_buf = nil
@@ -81,8 +82,8 @@ function TermToggle(height)
 end
 
 -- Term Toggle Keymaps
-vim.keymap.set('n', '<A-t>', ':lua TermToggle(20)<CR>', { noremap = true, silent = true })
-vim.keymap.set('i', '<A-t>', '<Esc>:lua TermToggle(20)<CR>', { noremap = true, silent = true })
-vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:lua TermToggle(20)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-t>', ':lua TermToggle(10)<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<A-t>', '<Esc>:lua TermToggle(10)<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:lua TermToggle(10)<CR>', { noremap = true, silent = true })
 
 -- vim: ts=2 sts=2 sw=2 et

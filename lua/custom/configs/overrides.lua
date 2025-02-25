@@ -57,7 +57,6 @@ M.mason = {
     -- web dev
     'css-lsp',
     'ts-standard',
-    'deno',
     'html-lsp',
     'prettier',
     'tailwindcss-language-server',
