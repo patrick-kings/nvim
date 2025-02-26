@@ -1,28 +1,33 @@
 local languages = {
   'rust',
-  'vim',
-  'lua',
+
   'html',
   'css',
   'javascript',
   'typescript',
   'tsx',
+
   'markdown',
-  'tsx',
+
   'json',
   'jsonc',
+
   'java',
+
   'toml',
   'yaml',
+
   'c',
   'zig',
   'python',
   'go',
+
   'dockerfile',
   'svelte',
-  'vimdoc',
+
   'sql',
   'regex',
+
   'make',
   'cmake',
 
@@ -30,8 +35,11 @@ local languages = {
   'diff',
   'lua',
   'luadoc',
+
   'markdown_inline',
+
   'query',
+
   'vim',
   'vimdoc',
 }
