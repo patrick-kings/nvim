@@ -5,12 +5,6 @@ local opt = vim.opt
 opt.autoread = true
 opt.autowriteall = true
 
--- format rust files
--- auto_cmd({ "BufWritePre" }, {
---   pattern = "*.rs",
---   command = "RustFmt",
--- })
---
 -- save files automatically
 auto_cmd({
   'TextChanged',
@@ -33,4 +27,9 @@ auto_cmd({
   command = 'update',
 })
 
-
+-- format rust files
+-- auto_cmd({ "BufWritePre" }, {
+--   pattern = "*.rs",
+--   command = "RustFmt",
+-- })
+--
