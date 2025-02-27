@@ -82,8 +82,8 @@ function TermToggle(height)
 end
 
 -- Term Toggle Keymaps
-vim.keymap.set('n', '<A-t>', ':lua TermToggle(10)<CR>', { noremap = true, silent = true })
-vim.keymap.set('i', '<A-t>', '<Esc>:lua TermToggle(10)<CR>', { noremap = true, silent = true })
-vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:lua TermToggle(10)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-t>', ':lua TermToggle(15)<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<A-t>', '<Esc>:lua TermToggle(15)<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<A-t>', '<C-\\><C-n>:lua TermToggle(15)<CR>', { noremap = true, silent = true })
 
 -- vim: ts=2 sts=2 sw=2 et
