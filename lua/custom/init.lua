@@ -32,7 +32,13 @@ auto_cmd({
 --   pattern = "*.rs",
 --   command = "RustFmt",
 -- })
---
+
+-- lualine
+require('lualine').setup {
+  options = {
+    theme = 'gruvbox_dark', -- Change this to your preferred theme
+  },
+}
 
 -- diagnostics on status line
 function DiagnosticsCount()

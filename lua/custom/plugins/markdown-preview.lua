@@ -9,6 +9,6 @@ return {
   end,
 
   keys = {
-    { '<leader>mp', ':MarkdownPreviewToggle<CR>', desc = 'Markdown Preview Toggle', silent = true },
+    { '<leader>mdp', ':MarkdownPreviewToggle<CR>', desc = 'Markdown Preview Toggle', silent = true },
   },
 }
