@@ -1,29 +1,25 @@
 local languages = {
-  'rust',
 
   'html',
   'css',
   'javascript',
   'typescript',
   'tsx',
-
-  'markdown',
+  'svelte',
 
   'json',
   'jsonc',
 
-  'java',
-
   'toml',
   'yaml',
+  'dockerfile',
 
+  'rust',
   'c',
   'zig',
   'python',
   'go',
-
-  'dockerfile',
-  'svelte',
+  'java',
 
   'sql',
   'regex',
@@ -36,6 +32,7 @@ local languages = {
   'lua',
   'luadoc',
 
+  'markdown',
   'markdown_inline',
 
   'query',

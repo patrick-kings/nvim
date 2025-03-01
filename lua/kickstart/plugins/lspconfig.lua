@@ -14,7 +14,7 @@ local servers = {
   'htmx-lsp',
   'vue-language-server',
   'prettierd',
-  -- 'typescript-language-server', -- use typescript-tools plugin
+  -- 'typescript-language-server', -- prefer typescript-tools plugin
 
   -- zig
   'zls',
@@ -31,6 +31,8 @@ local servers = {
   'golines',
   'gomodifytags',
   'go-debug-adapter',
+
+  'delve',
 
   'templ',
 

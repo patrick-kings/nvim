@@ -49,6 +49,7 @@ vim.keymap.set('n', '<C-i>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
 vim.keymap.set('n', '<C-o>', '<cmd>bprevious<CR>', { desc = 'Move to Previous buffer' })
 vim.keymap.set('n', '<C-d>', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
 vim.keymap.set('t', '<C-d>', '<cmd>bdelete!<CR>', { desc = 'Delete terminal buffer' })
+vim.keymap.set('n', '<leader>x', '<cmd>update<CR><cmd>bdelete<CR><cmd>bnext<CR>', { desc = 'Save and Close the current buffer', silent = true })
 --
 
 --
@@ -61,7 +62,7 @@ vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true, desc = 'Leav
 -- toggleterm plugin
 vim.keymap.set('t', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true })
 vim.keymap.set('v', '<leader>tmv', '<cmd>ToggleTermSendVisualSelection<CR>', { silent = true, desc = 'Send the visually selected text to terminal' })
 vim.keymap.set('n', '<leader>tml', '<cmd>ToggleTermSendCurrentLine<CR>', { silent = true, desc = 'Send the whole line to terminal' })
 --
