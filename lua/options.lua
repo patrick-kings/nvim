@@ -61,5 +61,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- sets a global statusline (recommended for modern setups)
+vim.o.laststatus = 3
+
 
 -- vim: ts=2 sts=2 sw=2 et
