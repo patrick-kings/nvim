@@ -138,6 +138,18 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup {
+
+      dap_configurations = {
+        {
+          -- Must be "go" or it will be ignored by the plugin
+          type = 'go',
+          name = 'Debug lapos-server',
+          request = 'launch',
+          program = '${workspaceFolder}/lapos-server/src',
+          args = { '--config-dir=${workspaceFolder}/lapos-server' },
+        },
+      },
+
       delve = {
         -- On Windows delve must be run attached or it crashes.
         -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring

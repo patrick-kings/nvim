@@ -34,6 +34,7 @@ local languages = {
 
   'markdown',
   'markdown_inline',
+  'latex',
 
   'query',
 

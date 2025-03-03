@@ -351,15 +351,7 @@ return {
               require('lspconfig')[server_name].setup {
                 server,
 
-                root_dir = require('lspconfig.util').root_pattern 'deno.json',
-                settings = {
-                  gopls = {
-                    analyses = {
-                      unusedparams = true,
-                    },
-                    staticcheck = true,
-                  },
-                },
+                root_dir = require('lspconfig.util').root_pattern('deno.json', 'deno.jsonc'),
               }
               return
             end
