@@ -66,5 +66,6 @@ vim.keymap.set('n', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true })
 vim.keymap.set('v', '<leader>tmv', '<cmd>ToggleTermSendVisualSelection<CR>', { silent = true, desc = 'Send the visually selected text to terminal' })
 vim.keymap.set('n', '<leader>tml', '<cmd>ToggleTermSendCurrentLine<CR>', { silent = true, desc = 'Send the whole line to terminal' })
 --
---
+
+---
 -- vim: ts=2 sts=2 sw=2 et
