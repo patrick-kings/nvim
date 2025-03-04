@@ -1,8 +1,5 @@
 local servers = {
 
-  'lua-language-server',
-  'stylua',
-
   -- web dev
   'css-lsp',
   'ts-standard',
@@ -57,6 +54,11 @@ local servers = {
   'yamllint',
   'yamlfmt',
   'yaml-language-server',
+
+  'json-lsp',
+
+  'lua-language-server',
+  'stylua',
 
   'docker_compose_language_service',
 
