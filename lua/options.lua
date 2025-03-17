@@ -64,5 +64,6 @@ vim.opt.scrolloff = 10
 -- sets a global statusline (recommended for modern setups)
 vim.o.laststatus = 3
 
+vim.opt.termguicolors = true
 
 -- vim: ts=2 sts=2 sw=2 et
