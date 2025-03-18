@@ -17,10 +17,10 @@ return {
         offsets = {
           {
             filetype = 'neo-tree', -- eg NvimTree, neo-tree
-            text = 'File Explorer',
+            text = 'file system',
             text_align = 'center',
             highlight = 'Directory',
-            separator = true, -- Adds a thin separator
+            separator = false, -- Adds a thin separator
           },
         },
         hover = {
