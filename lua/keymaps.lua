@@ -45,9 +45,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.keymap.set('n', '<C-i>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
-vim.keymap.set('n', '<C-o>', '<cmd>bprevious<CR>', { desc = 'Move to Previous buffer' })
-vim.keymap.set('n', '<C-d>', '<cmd>update<CR><cmd>bdelete<CR>', { desc = 'Delete buffer' })
+vim.keymap.set('n', '<C-i>', '<cmd>bprevious<CR>', { desc = 'Move to Previous buffer' })
+vim.keymap.set('n', '<C-o>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
+vim.keymap.set('n', '<C-d>', '<cmd>BufferLineCloseOthers<CR>', { desc = 'Close all other buffers except the current' })
 vim.keymap.set('t', '<C-d>', '<cmd>bdelete!<CR>', { desc = 'Delete terminal buffer' })
 vim.keymap.set('n', '<leader>x', '<cmd>update<CR><cmd>bdelete<CR><cmd>bnext<CR>', { desc = 'Save and Close the current buffer', silent = true })
 --

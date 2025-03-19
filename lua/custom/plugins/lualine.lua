@@ -18,15 +18,5 @@ return {
 
       return string.format(' %s %d  %s %d ', error_sign, error_count, warn_sign, warning_count)
     end
-
-    -- Append diagnostics info to the existing statusline
-    -- vim.o.statusline = vim.o.statusline .. ' %= %{v:lua.DiagnosticsCount()} %l:%c %p%%'
-
-    -- Auto-refresh statusline when diagnostics change
-    vim.api.nvim_create_autocmd({ 'DiagnosticChanged', 'BufEnter' }, {
-      callback = function()
-        vim.cmd 'redrawstatus'
-      end,
-    })
   end,
 }
