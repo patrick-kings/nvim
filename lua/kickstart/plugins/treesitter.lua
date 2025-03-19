@@ -1,5 +1,4 @@
 local languages = {
-
   'html',
   'css',
   'javascript',
