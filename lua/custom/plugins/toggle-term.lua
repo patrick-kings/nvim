@@ -50,10 +50,6 @@ return {
 
     vim.keymap.set('n', '<leader>tml', '<cmd>ToggleTermSendCurrentLine<CR>', { silent = true, desc = 'Send the whole line to terminal' })
 
-    vim.keymap.set('t', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-    vim.keymap.set('i', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true, silent = true })
-    vim.keymap.set('n', '<A-t>', '<cmd>ToggleTerm<CR>', { noremap = true })
-
     --
   end,
 }
