@@ -7,7 +7,7 @@ return {
         theme = 'gruvbox_dark', -- Change this to your preferred theme
       },
 
-      extensions = { 'toggleterm', 'nvim-dap-ui' },
+      extensions = { 'nvim-dap-ui' },
     }
     --
     -- -- diagnostics on status line
