@@ -2,6 +2,11 @@ return {
   'github/copilot.vim',
   event = 'InsertEnter',
   config = function()
+    require('copilot').setup {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    }
+
     -- Enable Copilot by default
     vim.g.copilot_enabled = true
     vim.g.copilot_no_tab_map = true -- Prevent default <Tab> mapping

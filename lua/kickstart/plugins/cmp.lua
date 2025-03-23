@@ -34,6 +34,11 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+
+      {
+        'onsails/lspkind.nvim',
+        event = 'VeryLazy',
+      },
     },
     config = function()
       -- See `:help cmp`
@@ -48,6 +53,12 @@ return {
           end,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
+
+        format = require('lspkind').cmp_format {
+          mode = 'symbol',
+          max_width = 50,
+          symbol_map = { Copilot = '' },
+        },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
@@ -111,6 +122,7 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'crates' },
+          { name = 'copilot', group_index = 2 },
         },
       }
     end,
