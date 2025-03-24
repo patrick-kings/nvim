@@ -2,7 +2,7 @@
 return {
   'windwp/nvim-ts-autotag',
   event = 'InsertEnter',
-  lazy = false,
+  lazy = true,
 
   dependencies = 'nvim-treesitter/nvim-treesitter',
   config = function()
