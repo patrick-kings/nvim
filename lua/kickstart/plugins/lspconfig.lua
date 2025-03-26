@@ -17,7 +17,7 @@ local servers = {
   'zls',
 
   -- rust
-  'rust-analyzer',
+  -- 'rust-analyzer',
   'codelldb',
 
   -- golang
@@ -293,27 +293,30 @@ return {
 
             -- rust
             if server_name == 'rust_analyzer' then
-              require('lspconfig')[server_name].setup {
-                server,
-                cmd = {
-                  'rustup',
-                  'run',
-                  'stable',
-                  'rust-analyzer',
-                },
-                filetypes = { 'rust' },
-                root_dir = require('lspconfig.util').root_pattern 'Cargo.toml',
-
-                settings = {
-                  ['rust-analyzer'] = {
-                    cargo = {
-                      allFeatures = true,
-                    },
-                  },
-                },
-              }
+              -- NOTE: use the rust-analyzer bundled with rust instead of the mason one.
               return
+              -- require('lspconfig')[server_name].setup {
+              --   server,
+              --   cmd = {
+              --     'rustup',
+              --     'run',
+              --     'stable',
+              --     'rust-analyzer',
+              --   },
+              --   filetypes = { 'rust' },
+              --   root_dir = require('lspconfig.util').root_pattern 'Cargo.toml',
+              --
+              --   settings = {
+              --     ['rust-analyzer'] = {
+              --       cargo = {
+              --         allFeatures = true,
+              --       },
+              --     },
+              --   },
+              -- }
+              -- return
             end
+            --
 
             -- golang
             if server_name == 'gopls' then
