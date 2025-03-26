@@ -17,7 +17,6 @@ local servers = {
   'zls',
 
   -- rust
-  -- 'rust-analyzer',
   'codelldb',
 
   -- golang
@@ -291,31 +290,6 @@ return {
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
 
-            -- rust
-            if server_name == 'rust_analyzer' then
-              -- NOTE: use the rust-analyzer bundled with rust instead of the mason one.
-              return
-              -- require('lspconfig')[server_name].setup {
-              --   server,
-              --   cmd = {
-              --     'rustup',
-              --     'run',
-              --     'stable',
-              --     'rust-analyzer',
-              --   },
-              --   filetypes = { 'rust' },
-              --   root_dir = require('lspconfig.util').root_pattern 'Cargo.toml',
-              --
-              --   settings = {
-              --     ['rust-analyzer'] = {
-              --       cargo = {
-              --         allFeatures = true,
-              --       },
-              --     },
-              --   },
-              -- }
-              -- return
-            end
             --
 
             -- golang
