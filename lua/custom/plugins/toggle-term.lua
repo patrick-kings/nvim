@@ -46,6 +46,12 @@ return {
       vert_term:toggle()
     end, { desc = 'Toggle vertical terminal' })
 
+    -- Tab terminal
+    local tab_term = Terminal:new { direction = 'tab' }
+    vim.keymap.set('n', '<leader>tmb', function()
+      tab_term:toggle()
+    end, { desc = 'Toggle tab terminal' })
+
     vim.keymap.set('v', '<leader>tmv', '<cmd>ToggleTermSendVisualSelection<CR>', { silent = true, desc = 'Send the visually selected text to terminal' })
 
     vim.keymap.set('n', '<leader>tml', '<cmd>ToggleTermSendCurrentLine<CR>', { silent = true, desc = 'Send the whole line to terminal' })
