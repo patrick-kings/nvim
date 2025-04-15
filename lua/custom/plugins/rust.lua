@@ -25,6 +25,9 @@ return {
             vim.keymap.set('n', '<leader>crv', crates.show_versions_popup, { desc = 'Show crate versions' })
             vim.keymap.set('n', '<leader>crf', crates.show_features_popup, { desc = 'Show crate features' })
             vim.keymap.set('n', '<leader>crd', crates.show_dependencies_popup, { desc = 'Show dependencies' })
+            vim.keymap.set('n', '<leader>crm', crates.open_documentation, { desc = 'open documentation' })
+            vim.keymap.set('n', '<leader>crh', crates.open_homepage, { desc = 'open homepage' })
+            vim.keymap.set('n', '<leader>crr', crates.open_repository, { desc = 'open repository page' })
           end
         end,
       })
@@ -34,7 +37,7 @@ return {
   },
   {
     'mrcjkb/rustaceanvim',
-    version = '^6', -- Recommended
+    version = vim.version().minor >= 11 and false or '^5',
     lazy = false, -- This plugin is already lazy
 
     config = function()
