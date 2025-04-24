@@ -17,7 +17,7 @@ local servers = {
   'tailwindcss-language-server',
   'deno',
 
-  'djlint'
+  'djlint',
 
   -- 'typescript-language-server', -- prefer typescript-tools plugin
 
