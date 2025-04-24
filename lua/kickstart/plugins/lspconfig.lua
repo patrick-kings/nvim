@@ -2,15 +2,24 @@ local servers = {
 
   -- web dev
   'css-lsp',
-  'ts-standard',
+
   'html-lsp',
-  'prettier',
-  'tailwindcss-language-server',
-  'eslint-lsp',
-  'deno',
   'htmx-lsp',
-  'vue-language-server',
+  'htmlhint',
+
+  'eslint-lsp',
+  'ts-standard',
+
+  'prettier',
   'prettierd',
+
+  'vue-language-server',
+  'tailwindcss-language-server',
+  'deno',
+
+  'jinja-lsp',
+  'django-template-lsp',
+
   -- 'typescript-language-server', -- prefer typescript-tools plugin
 
   -- zig
