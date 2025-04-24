@@ -17,8 +17,7 @@ local servers = {
   'tailwindcss-language-server',
   'deno',
 
-  'jinja-lsp',
-  'django-template-lsp',
+  'djlint'
 
   -- 'typescript-language-server', -- prefer typescript-tools plugin
 
