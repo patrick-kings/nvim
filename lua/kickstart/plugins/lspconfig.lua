@@ -15,7 +15,7 @@ local servers = {
 
   'vue-language-server',
   'tailwindcss-language-server',
-  'deno',
+  -- 'deno',
 
   'djlint',
 
@@ -325,11 +325,19 @@ return {
                 server,
 
                 root_dir = require('lspconfig.util').root_pattern('deno.json', 'deno.jsonc'),
+
+                single_file_support = false,
+
+                on_attach = function(client, bufnr)
+                  vim.notify('Attached to Deno', vim.log.levels.INFO)
+                end,
               }
               return
             end
 
+            --
             require('lspconfig')[server_name].setup(server)
+            --
           end,
         },
       }
