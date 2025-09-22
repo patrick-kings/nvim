@@ -4,7 +4,6 @@ local languages = {
   'javascript',
   'typescript',
   'tsx',
-  'svelte',
 
   'json',
   'jsonc',
@@ -37,8 +36,6 @@ local languages = {
 
   'query',
 
-  'vim',
-  'vimdoc',
 }
 
 return {

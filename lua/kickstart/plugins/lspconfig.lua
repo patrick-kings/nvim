@@ -13,7 +13,6 @@ local servers = {
   'prettier',
   'prettierd',
 
-  'vue-language-server',
   'tailwindcss-language-server',
   -- 'deno',
 
