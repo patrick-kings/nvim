@@ -49,7 +49,8 @@ vim.keymap.set('n', '<C-i>', '<cmd>bprevious<CR>', { desc = 'Move to Previous bu
 vim.keymap.set('n', '<C-o>', '<cmd>bnext<CR>', { desc = 'Move to Next buffer' })
 vim.keymap.set('t', '<C-d>', '<cmd>bdelete!<CR>', { desc = 'Delete terminal buffer' })
 vim.keymap.set('n', '<leader>xa', '<cmd>BufferLineCloseOthers<CR>', { desc = 'Close all other buffers except the current' })
-vim.keymap.set('n', '<leader>xc', '<cmd>update<CR><cmd>bdelete<CR><cmd>bnext<CR>', { desc = 'Save and Close the current buffer', silent = true })
+vim.keymap.set('n', '<leader>xc', '<cmd>update<CR><cmd>bprevious<CR><cmd>bdelete #<CR>', { desc = 'Save and Close the current buffer', silent = true })
+vim.keymap.set('n', '<C-d>', '<cmd>update<CR><cmd>bprevious<CR><cmd>bdelete #<CR>', { desc = 'Save and Close the current buffer', silent = true })
 --
 
 --
@@ -58,7 +59,6 @@ vim.keymap.set('t', '<A-l>', '<C-\\><C-N><C-w>l', { noremap = true, desc = 'Leav
 vim.keymap.set('t', '<A-k>', '<C-\\><C-N><C-w>k', { noremap = true, desc = 'Leave terminal mode and move to top window' })
 vim.keymap.set('t', '<A-j>', '<C-\\><C-N><C-w>j', { noremap = true, desc = 'Leave terminal mode and move to bottom window' })
 --
-
 
 ---
 -- vim: ts=2 sts=2 sw=2 et
